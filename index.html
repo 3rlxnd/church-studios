@@ -7,6 +7,7 @@
     <meta name="description" content="Beschreibung der Website, die den deutschen Datenschutzbestimmungen entspricht.">
     <meta name="author" content="Erland Godt">
     <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="./logo.png">
     <title>Remise am Kirchplatz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -101,7 +102,6 @@
                     ergeben ein geschmackvolles Ambiente und schönes modernes Wohngefühl.</li>
                 <li>Internet TV und WLAN inkl.</li>
             </ul>
-            <i class="fa-solid fa-wifi"></i>
         </section>
         <section id="gallery-section" aria-labelledby="services">
             <h2 id="gallery">Galerie</h2>
@@ -146,11 +146,24 @@
         </section>
     </footer>
 
+    
+    <div id="map"></div>
+
     <script>
-        window.onload = function () {
-            // alert("Wir verwenden Cookies, um unsere Website zu optimieren. Mehr Infos in unserer Datenschutzerklärung.");
-        };
+        function initMap() {
+            const location = { lat: 37.7749, lng: -122.4194 }; // Replace with your location's coordinates
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location,
+            });
+            new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
 </body>
 
 </html>
