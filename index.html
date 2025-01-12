@@ -7,36 +7,101 @@
     <meta name="description" content="Beschreibung der Website, die den deutschen Datenschutzbestimmungen entspricht.">
     <meta name="author" content="Erland Godt">
     <meta name="robots" content="index, follow">
-    <title>Appartmenthaus Godt</title>
+    <title>Remise am Kirchplatz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header id="header" role="banner" aria-label="Hauptheader">
-        <h1>Godt</h1>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <img src="./logo.png" height="50px" alt="Logo">
+            <h1 id="logo">Remise <span style="font-weight: 200;">am Kirchplatz</span></h1>
+        </div>
         <nav id="navigation" role="navigation" aria-label="Hauptnavigation">
-            <a class="navigation-link" href="#services">Leistungen</a>
+            <!-- <a class="navigation-link" href="#services">Wohnungen</a>
             <a class="navigation-link" href="#gallery">Galerie</a>
-            <a class="navigation-link" href="#contact">Kontakt</a>
-            </ul>
+            <a class="navigation-link" href="#contact">Kontakt</a> -->
+            <a class="navigation-link">+491704516315</a>
         </nav>
     </header>
 
     <main role="main" id="main">
         <section id="banner-section" aria-labelledby="about">
-            <h1 id="about">Willkommen</h1>
-            <p>Appartmenthaus <strong>Am Kirchplatz</strong></p>
+            <h1 id="about">Ihr Zuhause zwischen Berlin und Potsdam<br>Stilvoll und bequem</h1>
         </section>
 
         <section id="services-section" aria-labelledby="services">
+            <h2 id="services">Wilkommen</h2>
+            <p>Möblierte Apartments &amp; Ferienwohnungen für Ihren Aufenthalt inmitten Berlin &amp; Potsdam.</p>
+            <ul>
+                <li>modern wohnen in historischer &amp; ruhiger Umgebung</li>
+                <li>Vermietung monatsweise - für berufliche und private Zwecke</li>
+                <li>Wohnungen für 1-5 Personen; gerne auch für Handwerkerteams</li>
+                <li>ab € 850,- pro Monat</li>
+            </ul>
+            <ul>
+                <li>Verkehrsgünstig gelegen</li>
+                <li>Direkter Anschluss an die neue Schnellstr. L 40 nach Potsdam und BER</li>
+                <li>12 Min. nach Potsdam; 18 Min. nach Berlin KuDamm; 25 Min. BER, 8 Min.
+                    Kleinmachnow Teltow</li>
+                <li>Anbindung an den öffentlichen Verkehr direkt vor der Tür</li>
+            </ul>
+            <!-- <p>Hier einfach eine Anfrage stellen!</p> -->
+        </section>
+
+        <section id="form-section" aria-labelledby="kontaktformular-überschrift">
+            <h2 id="kontaktformular-überschrift">Kontaktformular</h2>
+            <form onsubmit="sendEmail(event)" aria-describedby="formular-beschreibung">
+                <p id="formular-beschreibung">Bitte füllen Sie das folgende Formular aus, um uns eine E-Mail zu senden.</p>
+                
+                <label for="name">Name:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Geben Sie Ihren vollständigen Namen ein"
+                ><br><br>
+                
+                <label for="email">E-Mail:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Geben Sie Ihre E-Mail-Adresse ein"
+                ><br><br>
+                
+                <label for="message">Nachricht:</label><br>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Geben Sie Ihre Nachricht ein"
+                ></textarea><br><br>
+                
+                <button type="submit" aria-label="E-Mail senden">E-Mail senden</button>
+            </form>
+        </section>
+        
+
+        <section id="flats-section" aria-labelledby="services">
             <h2 id="services">Unsere Appartments</h2>
-            <p>Das Gasthaus "Am Kirchplatz" liegt idyllisch in der ruhigen Landschaft Brandenburgs, nur 30 Minuten von
-                Berlin entfernt. Unsere möblierten Apartments mit voll ausgestatteter Küche bieten Komfort und
-                Unabhängigkeit für kurze oder längere Aufenthalte. WLAN steht in allen Bereichen zur Verfügung.</p>
-            <p>Erkunden Sie die Umgebung bei Wanderungen oder Fahrradtouren, oder genießen Sie die Nähe zu Berlin. Am
-                Abend lädt die Terrasse oder der Garten zum Entspannen ein. Praktische Einrichtungen wie eine Wäscherei
-                machen längere Aufenthalte angenehm. Wir freuen uns auf Ihren Besuch!</p>
-                <i class="fa-solid fa-wifi"></i>
+            <ul>
+                <li>Die Remise wurde sehr aufwändig im Kern saniert.</li>
+                <li>Entstanden sind so vier neuwertige Wohnungen mit einer Wohnfläche von 33 –
+                    68 Qm.</li>
+                <li>Alle Wohnungen, zum Teil mit Garten und Terrasse sind geschmackvoll und
+                    vollständig möbliert.</li>
+                <li>Bodentiefe Fenster, viel Licht, Fußbodenheizung, Waschminennutzung usw.
+                    ergeben ein geschmackvolles Ambiente und schönes modernes Wohngefühl.</li>
+                <li>Internet TV und WLAN inkl.</li>
+            </ul>
+            <i class="fa-solid fa-wifi"></i>
         </section>
         <section id="gallery-section" aria-labelledby="services">
             <h2 id="gallery">Galerie</h2>
@@ -55,15 +120,23 @@
                     width="300px" />
             </div>
         </section>
+        <section id="flats-section" aria-labelledby="services">
+            <h2 id="services">Lage</h2>
+            <p>Stahnsdorf, Teltow, Kleinmachnow gehören zu den bevorzugten Wohngebieten im
+                südlichen Berlin.</p>
+            <p>Die Lage ist ruhig, dennoch sehr verkehrsgünstig. In 20 Minuten sind Sie am Berliner
+                Kuhdamm oder in 12 in der City von Potsdam.</p>
+            <i class="fa-solid fa-wifi"></i>
+        </section>
     </main>
 
     <footer role="contentinfo" aria-label="Fußzeile">
         <section id="contact-section" aria-labelledby="contact">
             <h2 id="contact">Kontakt</h2>
             <address>
-                <p>Apartmenthaus<br>Beispielstraße 1<br>12345 Beispielstadt</p>
-                <p>Email: <a href="mailto:info@beispiel.de">info@beispiel.de</a></p>
-                <p>Telefon: <a href="tel:+491234567890">+49 123 456 7890</a></p>
+                <p>Remise am Kirchplatz<br>Matthias Godt<br>Kirchplatz 12a<br>14532 Stahnsdorf OT Güterfelde</p>
+                <p>Telefon: <a href="tel:+491234567890">0170 4516315</a></p>
+                <p>Email: <a href="mailto:info@beispiel.de">m.godt@t-online.de</a></p>
             </address>
         </section>
 
