@@ -30,7 +30,7 @@
         <section id="banner-section" aria-labelledby="about">
             <h1 id="about">Ihr Zuhause zwischen Berlin und Potsdam<br>Stilvoll und bequem</h1>
         </section>
-
+        
         <section id="services-section" aria-labelledby="services">
             <h2 id="services">Wilkommen</h2>
             <p>Möblierte Apartments &amp; Ferienwohnungen für Ihren Aufenthalt inmitten Berlin &amp; Potsdam.</p>
@@ -40,6 +40,8 @@
                 <li>Wohnungen für 1-5 Personen; gerne auch für Handwerkerteams</li>
                 <li>ab € 850,- pro Monat</li>
             </ul>
+            <img src="https://fastly.picsum.photos/id/42/3456/2304.jpg?hmac=dhQvd1Qp19zg26MEwYMnfz34eLnGv8meGk_lFNAJR3g"
+                width="300px" />
             <ul>
                 <li>Verkehrsgünstig gelegen</li>
                 <li>Direkter Anschluss an die neue Schnellstr. L 40 nach Potsdam und BER</li>
@@ -53,42 +55,25 @@
         <section id="form-section" aria-labelledby="kontaktformular-überschrift">
             <h2 id="kontaktformular-überschrift">Kontaktformular</h2>
             <form onsubmit="sendEmail(event)" aria-describedby="formular-beschreibung">
-                <p id="formular-beschreibung">Bitte füllen Sie das folgende Formular aus, um uns eine E-Mail zu senden.</p>
-                
+                <p id="formular-beschreibung">Bitte füllen Sie das folgende Formular aus, um uns eine E-Mail zu senden.
+                </p>
+
                 <label for="name">Name:</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    required 
-                    aria-required="true" 
-                    aria-label="Geben Sie Ihren vollständigen Namen ein"
-                ><br><br>
-                
+                <input type="text" id="name" name="name" required aria-required="true"
+                    aria-label="Geben Sie Ihren vollständigen Namen ein"><br><br>
+
                 <label for="email">E-Mail:</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required 
-                    aria-required="true" 
-                    aria-label="Geben Sie Ihre E-Mail-Adresse ein"
-                ><br><br>
-                
+                <input type="email" id="email" name="email" required aria-required="true"
+                    aria-label="Geben Sie Ihre E-Mail-Adresse ein"><br><br>
+
                 <label for="message">Nachricht:</label><br>
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="5" 
-                    required 
-                    aria-required="true" 
-                    aria-label="Geben Sie Ihre Nachricht ein"
-                ></textarea><br><br>
-                
+                <textarea id="message" name="message" rows="5" required aria-required="true"
+                    aria-label="Geben Sie Ihre Nachricht ein"></textarea><br><br>
+
                 <button type="submit" aria-label="E-Mail senden">E-Mail senden</button>
             </form>
         </section>
-        
+
 
         <section id="flats-section" aria-labelledby="services">
             <h2 id="services">Unsere Appartments</h2>
@@ -145,25 +130,15 @@
             <p><a href="impressum.html">Impressum</a></p>
         </section>
     </footer>
-
-    
-    <div id="map"></div>
-
-    <script>
-        function initMap() {
-            const location = { lat: 37.7749, lng: -122.4194 }; // Replace with your location's coordinates
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 12,
-                center: location,
-            });
-            new google.maps.Marker({
-                position: location,
-                map: map,
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-
 </body>
+<script>
+    function sendEmail(event) {
+        event.preventDefault()
+        const formdata = new FormData(event.target)
+        const data = Object.fromEntries(formdata)
+        console.log(data);
+        
+    }
+</script>
 
 </html>
