@@ -1,0 +1,19 @@
+#banner-section {
+    position: relative;
+    overflow: hidden;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+#banner-section > img {
+    position: absolute;
+    width: 100%;
+}
+
+#banner-section > p {
+    z-index: 1;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 5px rgb(65, 65, 65);
+}

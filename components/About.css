@@ -1,0 +1,12 @@
+#services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#services-content {
+    max-width: 600px;
+}

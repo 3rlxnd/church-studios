@@ -1,0 +1,38 @@
+#contact-form-section {
+    background-color: #8d9363;
+}
+
+#form-section-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+#form-section {
+    box-sizing: border-box;
+    padding: 20px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+form > input, textarea, button {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+form > button {
+    width: 150px;
+    background-color: white;
+}
+
+form > button:hover {
+    background-color: rgb(170, 182, 150);
+}
