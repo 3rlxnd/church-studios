@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -9,4 +10,8 @@
 
 #services-content {
     max-width: 600px;
+}
+
+.services-list > li::marker {
+    color: var(--primary-color);
 }

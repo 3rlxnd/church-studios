@@ -10,3 +10,16 @@
 #flats-content {
     max-width: 600px;
 }
+
+#features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.feature-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}

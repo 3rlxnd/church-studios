@@ -8,8 +8,10 @@
     <meta name="author" content="Erland Godt">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="./assets/logo.png">
-    <title>Remise am Kirchplatz</title>
+    <title>Appartments am Kirchplatz</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,18 +29,15 @@
                 <p><b>Appartments</b> am Kirchplatz</p>
             </div>
             <nav role="navigation" aria-label="Hauptnavigation">
-                <a class="navigation-link" href="tel:+491704516315">+491704516315</a>
-                <select class="navigation-link">
-                    <option value="de">DE</option>
-                    <option value="en">EN</option>
-                </select>
+                <a class="navigation-link" href="tel:+491704516315"><i class="fa-solid fa-phone" style="color: var(--primary-color)"></i>+491704516315</a>
+                <p><a class="navigation-link" href="/">EN</a> | <b>DE</b></p>
             </nav>
         </div>
     </header>
 
     <section id="banner-section" aria-labelledby="banner">
         <img src="./assets/images/IMG_7132.JPG" alt="Bild">
-        <p class="title">Ihr Zuhause zwischen Berlin und Potsdam<br>Stilvoll und bequem</p>
+        <p class="title">Ihr Zuhause zwischen Berlin und Potsdam<br><b>Stilvoll und bequem</b></p>
     </section>
 
     <section aria-labelledby="services">
@@ -72,7 +71,7 @@
     <section id='contact-form-section' aria-labelledby="kontaktformular-überschrift">
         <div class='section-wrapper' id="form-section">
             <h2 id="form-title">
-                Kontaktformular
+                Schicke uns eine <b>Anfrage</b>
             </h2>
             <form onSubmit={sendEmail} aria-describedby="formular-beschreibung">
                 <p id="formular-beschreibung">
@@ -95,9 +94,8 @@
 
     <section aria-labelledby="flats">
         <div class="section-wrapper" id="flats-section">
-            <img src="./assets/images/IMG_0650.jpeg" class="image" />
             <div id='flats-content'>
-                <h2 class="title">Unsere Appartments</h2>
+                <h2 class="title">Unsere <b>Appartments</b></h2>
                 <ul>
                     <li>Die Remise wurde sehr aufwändig im Kern saniert.</li>
                     <li>Entstanden sind so vier neuwertige Wohnungen mit einer Wohnfläche von 33 –
@@ -109,19 +107,25 @@
                     <li>Internet TV und WLAN inkl.</li>
                 </ul>
             </div>
+            <div id="features">
+                <p class="feature-card"><i class="fa-solid fa-route fa-xl" style="color: var(--primary-color)"></i>Top Lage zwischen Berlin & Potsdam</p>
+                <p class="feature-card"><i class="fa-solid fa-expand fa-xl" style="color: var(--primary-color)"></i>Ab 33-68m2 Wohnfläche</p>
+                <p class="feature-card"><i class="fa-solid fa-wifi fa-xl" style="color: var(--primary-color)"></i>Schnelles & zuverlässiges WiFi</p>
+            </div>
         </div>
     </section>
 
     <section id="gallery-section" aria-labelledby="gallery">
         <div class="section-wrapper" id="gallery-container">
             <img id="gallery-preview-image" src="./assets/images/IMG_0650.jpeg">
+            <div id="gallery-images"></div>
         </div>
     </section>
 
     <section aria-labelledby="maps">
         <div class="section-wrapper" id="maps-section">
             <div id='maps-content'>
-                <h2 class="title">Lage</h2>
+                <h2 class="title">Unsere <b>Lage</b></h2>
                 <p>Stahnsdorf, Teltow, Kleinmachnow gehören zu den bevorzugten Wohngebieten im
                     südlichen Berlin. Die Lage ist ruhig, dennoch sehr verkehrsgünstig. In 20 Minuten sind Sie am
                     Berliner
